@@ -1,24 +1,26 @@
-# README
+# Test Guru app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+***
+Test taking application
+***
+This app works on
 
-Things you may want to cover:
+- ruby 2.7.2
 
-* Ruby version
+- rails 7.0.1
 
-* System dependencies
+***
+Entities:
 
-* Configuration
+- User
+- Test
+- Question
+- Answer
+- Result 
 
-* Database creation
+***
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run this app:
+```
+bundle exec rails s
+```
