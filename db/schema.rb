@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_20_175352) do
+ActiveRecord::Schema.define(version: 2022_01_20_175958) do
+
+  create_table "questions", force: :cascade do |t|
+    t.text "body"
+    t.integer "test_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["test_id"], name: "index_questions_on_test_id"
+  end
 
   create_table "tests", force: :cascade do |t|
     t.string "title"
@@ -21,5 +29,6 @@ ActiveRecord::Schema.define(version: 2022_01_20_175352) do
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
+  add_foreign_key "questions", "tests"
   add_foreign_key "tests", "categories"
 end
