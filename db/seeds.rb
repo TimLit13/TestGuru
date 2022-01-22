@@ -1,4 +1,5 @@
 # clear db before seed
+UserTest.delete_all if UserTest.any?
 User.delete_all if User.any?
 Answer.delete_all if Answer.any?
 Question.delete_all if Question.any?
@@ -49,4 +50,13 @@ end
                  false
                end
   User.create(first_name: user_first_name, last_name: user_last_name, email: user_email, admin: user_admin)
+end
+
+# make references between users and tests
+users = User.pluck(:id)
+tests = Test.pluck(:id)
+Test.count.times do |n| 
+  user_test_user = users.sample
+  user_test_test = tests.sample
+  UserTest.create(user_id: user_test_user, test_id: user_test_test)
 end
