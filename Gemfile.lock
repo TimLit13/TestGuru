@@ -69,8 +69,8 @@ GEM
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     bindex (0.8.1)
-    bootsnap (1.9.4)
-      msgpack (~> 1.0)
+    bootsnap (1.10.2)
+      msgpack (~> 1.2)
     builder (3.2.4)
     capybara (3.36.0)
       addressable
@@ -89,6 +89,8 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    faker (2.19.0)
+      i18n (>= 1.6, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.8.11)
@@ -114,7 +116,7 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.7.1)
     minitest (5.15.0)
-    msgpack (1.4.2)
+    msgpack (1.4.3)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -218,6 +220,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  faker (~> 2)
   importmap-rails
   jbuilder
   puma (~> 5.0)
