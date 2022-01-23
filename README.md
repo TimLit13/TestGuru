@@ -16,7 +16,7 @@ Entities:
 - Test
 - Question
 - Answer
-- Result 
+- Category
 
 ***
 
