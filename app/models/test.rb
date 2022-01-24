@@ -1,4 +1,5 @@
 class Test < ApplicationRecord
+  has_many :questions
   belongs_to :category
 
   def self.test_titles(category_title)
