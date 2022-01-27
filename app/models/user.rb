@@ -5,4 +5,6 @@ class User < ApplicationRecord
   def tests_by_level(level)
     UserTest.where(user_id: id).joins(:test).where("tests.level = ?", level).pluck(:title)
   end
+
+  validates :first_name, :last_name, :email, presence: true
 end
