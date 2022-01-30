@@ -16,7 +16,7 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      render plain: @question.body + ' успешно сохранен'
+      redirect_to test_questions_path
     else
       render plain: @question.errors.full_messages
     end
