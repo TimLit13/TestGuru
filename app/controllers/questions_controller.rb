@@ -10,6 +10,9 @@ class QuestionsController < ApplicationController
     render plain: @question.body
   end
 
+  def new
+  end
+
   def create
     @question = @test.questions.new(question_params)
     if @question.save
