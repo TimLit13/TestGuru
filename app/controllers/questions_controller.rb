@@ -10,4 +10,10 @@ class QuestionsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def question_params
+    params.require(:question).permit(:id)
+  end
 end
