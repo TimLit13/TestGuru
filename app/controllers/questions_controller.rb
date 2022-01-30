@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index]
+  before_action :find_test, only: %i[index create]
   before_action :find_question, only: %i[show]
 
   def index
@@ -11,6 +11,12 @@ class QuestionsController < ApplicationController
   end
 
   def create
+    @question = @test.questions.new(question_params)
+    if @question.save
+      render plain: @question.body + ' успешно сохранен'
+    else
+      render plain: @question.errors.full_messages
+    end
   end
 
   def destroy
@@ -26,7 +32,7 @@ class QuestionsController < ApplicationController
     @test = Test.find(params[:test_id])
   end
 
-  # def question_params
-  #   params.require(:question).permit(:body)
-  # end
+  def question_params
+    params.require(:question).permit(:body)
+  end
 end
