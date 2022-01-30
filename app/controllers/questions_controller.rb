@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   before_action :find_test, only: %i[index create]
-  before_action :find_question, only: %i[show]
-
+  before_action :find_question, only: %i[show destroy]
+  
   def index
     @questions = @test.questions
   end
@@ -23,6 +23,11 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
+    if @question.destroy
+      redirect_to test_questions_path(@question.test)
+    else
+      render plain: "Error whith destroy"
+    end
   end
 
   private
