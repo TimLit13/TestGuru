@@ -37,7 +37,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     if @question.destroy
-      redirect_to test_questions_path(@question.test)
+      redirect_to @question.test
     else
       render :edit
     end
