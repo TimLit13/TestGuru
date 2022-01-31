@@ -1,0 +1,5 @@
+<%= form_with model: [@test, @question] do |form| %>
+  <%= form.label :body %>
+  <%= form.text_area :body, size: "50x10" %>
+  <%= form.submit %>
+<% end %>
