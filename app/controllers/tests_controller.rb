@@ -1,10 +1,10 @@
 class TestsController < ApplicationController
   before_action :find_test, only: %i[show]
+  before_action :find_all_tests, only: %i[index]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_record_not_found
 
   def index
-    render inline: "Here should be tests list"
   end
 
   def show
@@ -14,6 +14,10 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
+  end
+
+  def find_all_tests
+    @tests = Test.all
   end
 
   def rescue_with_record_not_found
