@@ -1,0 +1,36 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add --dev webpack-dev-server@^3
+
+PATH: 
+  /home/tim/.rvm/gems/ruby-2.7.2/bin:/home/tim/.rvm/gems/ruby-2.7.2@global/bin:/home/tim/.rvm/rubies/ruby-2.7.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/tim/.rvm/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  10.19.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EPERM: operation not permitted, symlink '../../../multicast-dns/cli.js' -> '/media/sf_thinknetica/rails_1_course/test_guru/node_modules/bonjour/node_modules/.bin/multicast-dns'
+
+npm manifest: 
+  {
+    "name": "test-guru",
+    "private": true,
+    "dependencies": {
+      "@rails/ujs": "^6.0.0",
+      "turbolinks": "^5.2.0",
+      "@rails/activestorage": "^6.0.0",
+      "@rails/actioncable": "^6.0.0"
+    },
+    "version": "0.1.0"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
