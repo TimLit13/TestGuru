@@ -1,0 +1,11 @@
+<%= turbo_frame_tag 'errors' %>
+  <%= render 'shared/errors', resource: @question %>
+<% end %>
+
+<h3><%= question_header(@question) %></h3>
+<%= form_with model: [@test, @question] do |form| %>
+  <%= form.label :body %>
+  <%= form.text_area :body, size: "50x10" %>
+  <%= form.submit %>
+<% end %>
+<%= link_to 'To questions list', @question.test %>
