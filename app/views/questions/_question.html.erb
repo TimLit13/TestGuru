@@ -1,9 +1,0 @@
-<tr>  
-  <td><%= question.body %></td>
-  <td><%= link_to 'Show', question_path(question) %> |</td>
-  <td><%= link_to 'Edit', edit_question_path(question) %> |</td>
-  <td><%= link_to 'Delete', question_path(question), 
-                      data: { turbo_method: :delete, 
-                              turbo_confirm: "Are you sure to delete #{question.body} question?" 
-                      } %></td>
-</tr>
