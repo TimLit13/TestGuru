@@ -68,5 +68,5 @@ end
 
   user_test_user = users.map(&:id).sample
   user_test_test = tests.map(&:id).sample
-  UserTest.create(user_id: user_test_user, test_id: user_test_test)
+  TestPassage.create(user_id: user_test_user, test_id: user_test_test)
 end
