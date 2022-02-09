@@ -1,1 +1,12 @@
-<h3>Test <i><%= @test_passage.test.title %></i> was completed!!!</h3>
+<h3>Test <i><%= @test_passage.test.title %></i></h3>
+<% if test_passage_success?(@test_passage) %>
+  <p><font color="green">Successfully completed.</font></p>
+  <p><font color="green">
+<% else%>
+  <p><font color="red">Wasn't completed</font></p>
+  <p><font color="red">
+<% end %>
+
+You scored <%= (test_passage_score(@test_passage)*100).round(0) %> %</p>
+
+<%= link_to 'All tests', tests_path %>
