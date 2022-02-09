@@ -12,4 +12,8 @@ module TestPassagesHelper
   def test_passage_score(test_passage)
     test_passage.correct_question/test_passage.test.questions.count.to_f.round(2)
   end
+
+  def question_number(test_passage)
+    test_passage.test.questions.order(:id).where('id <= ?', test_passage.current_question.id).length
+  end
 end
