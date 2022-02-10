@@ -1,0 +1,8 @@
+<li>
+  <%= link_to 'Show', answer_path(answer) %> |
+  <%= link_to 'Edit', edit_answer_path(answer) %> | 
+  <%= link_to 'Delete', answer_path(answer), 
+                      turbo_method: :delete,
+                      data: { confirm: "Are you sure to delete #{answer.body} answer?" 
+                      } %>
+</li>
