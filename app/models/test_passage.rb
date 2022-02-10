@@ -1,4 +1,7 @@
 class TestPassage < ApplicationRecord
+  
+  TEST_PASSAGE_SUCCESS = 0.85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
@@ -13,6 +16,18 @@ class TestPassage < ApplicationRecord
 
   def completed?
     current_question.nil?
+  end
+
+  def test_passage_success?
+    self.test_passage_score >= TEST_PASSAGE_SUCCESS
+  end
+
+  def test_passage_score
+    self.correct_question/self.test.questions.count.to_f.round(2)
+  end
+
+  def question_number
+    self.test.questions.order(:id).where('id <= ?', self.current_question.id).length
   end
 
   private
