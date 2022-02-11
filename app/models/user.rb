@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :author_tests, foreign_key: :author_id, class_name: 'Test'
   
+  validates :email, presence: true
+  validates :password, presence: true, if: Proc.new{ |u| u.password_digest.blank? }
+  validates :password, confirmation: true
+
   def tests_by_level(level)
     UserTest.where(user_id: id).joins(:test).where("tests.level = ?", level).pluck(:title)
   end
