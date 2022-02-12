@@ -1,17 +1,12 @@
 require 'digest/sha1'
 
 class User < ApplicationRecord
-
-  include Auth
-
   
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :author_tests, foreign_key: :author_id, class_name: 'Test'
   
-  validates :first_name, :last_name, :email, presence: true
-  validates :password, presence: true, if: Proc.new{ |u| u.password_digest.blank? }
-  validates :password, confirmation: true
+  has_secure_password
 
   def tests_by_level(level)
     UserTest.where(user_id: id).joins(:test).where("tests.level = ?", level).pluck(:title)
