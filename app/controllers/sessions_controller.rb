@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
-    cookies.delete[:user_url]
+    cookies.delete(:user_url)
     redirect_to root_path
   end
 end
