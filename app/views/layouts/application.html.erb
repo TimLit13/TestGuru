@@ -11,9 +11,7 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-    <%= content_tag :p, (content_tag :b, current_user.email), class: "nav user" %>
-    <% end %>
+    <%= render 'shared/navigation' %>
     <%= yield %>
   </body>
   <footer style="width: 100%;text-align: center; position: absolute; bottom: 20px">
