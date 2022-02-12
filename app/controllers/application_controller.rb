@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
+      cookies[:user_url] = request.path
       flash[:alert] = 'Login please'
       redirect_to login_path
     end

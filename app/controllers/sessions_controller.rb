@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path
+      redirect_to cookies[:user_url]
     else
       flash.now[:alert] = 'You are not logged in'
       render :new
@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
+    cookies.delete[:user_url]
     redirect_to root_path
   end
 end
