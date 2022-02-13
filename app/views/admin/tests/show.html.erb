@@ -9,7 +9,7 @@
   </thead>
 
   <tbody>
-    <%= render @test.questions %>
+    <%= render partial 'questions/question', collection: @test.questions %>
   </tbody>
 </table>
 
