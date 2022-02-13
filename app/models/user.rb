@@ -14,7 +14,6 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :author_tests, foreign_key: :author_id, class_name: 'Test'
   
-  validates :first_name, :last_name, presence: true
   validates :email, presence: true,
                     format: { with: EMAIL_FORMAT, message: "не является email"},
                     uniqueness: true
