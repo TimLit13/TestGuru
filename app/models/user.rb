@@ -1,8 +1,18 @@
 class User < ApplicationRecord
+  
+  EMAIL_FORMAT = URI::MailTo::EMAIL_REGEXP
+
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :author_tests, foreign_key: :author_id, class_name: 'Test'
   
+  has_secure_password
+
+  validates :first_name, :last_name, presence: true
+  validates :email, presence: true,
+                    format: { with: EMAIL_FORMAT, message: "не является email"},
+                    uniqueness: true
+
   def tests_by_level(level)
     UserTest.where(user_id: id).joins(:test).where("tests.level = ?", level).pluck(:title)
   end
@@ -10,6 +20,4 @@ class User < ApplicationRecord
   def test_passage(test)
     test_passages.order(created_at: :desc).find_by(test_id: test.id)
   end
-
-  validates :first_name, :last_name, :email, presence: true
 end

@@ -1,0 +1,19 @@
+<%= form_with url: sessions_path, local: true do |form| %>
+
+  <%= show_flash_message %>
+
+  <p>
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :email %>
+  </p>
+
+  <p>
+    <%= form.label :password %>
+    <%= form.password_field :password, id: :password %>
+  </p>
+
+  <p>
+    <%= form.submit 'Login' %>
+  </p>
+
+<% end %>
