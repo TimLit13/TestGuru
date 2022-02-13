@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   
-  EMAIL_FORMAT = /\A[a-zA-Z0-9.!\#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\z/
+  EMAIL_FORMAT = URI::MailTo::EMAIL_REGEXP
 
   has_many :test_passages
   has_many :tests, through: :test_passages
@@ -8,11 +8,10 @@ class User < ApplicationRecord
   
   has_secure_password
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :email, presence: true
-  validates :email, format: { with: EMAIL_FORMAT, message: "не является email"}
-  validates :email, uniqueness: true
+  validates :first_name, :last_name, presence: true
+  validates :email, presence: true,
+                    format: { with: EMAIL_FORMAT, message: "не является email"},
+                    uniqueness: true
 
   def tests_by_level(level)
     UserTest.where(user_id: id).joins(:test).where("tests.level = ?", level).pluck(:title)
