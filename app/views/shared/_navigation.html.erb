@@ -1,10 +1,10 @@
 <div class="nav">
   <%= content_tag :b, (link_to 'TestGuru', tests_path), class: "project-name"%>
-  <% if logged_in? %>
+  <% if user_signed_in? %>
     <%= content_tag :i, "Welcome, #{current_user.email} guru!", class: "user" %>
-    <%= link_to "Logout", logout_path, method: :delete %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
   <% else %>
-    <%= link_to "Sign up", signup_path %> | 
-    <%= link_to "Log in", login_path %>
+    <%= link_to "Sign up", new_user_registration_path %> | 
+    <%= link_to "Log in", new_user_session_path %>
   <% end %>
 </div>
