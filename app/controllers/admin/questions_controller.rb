@@ -18,8 +18,9 @@ class Admin::QuestionsController < Admin::BaseController
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to admin_test_questions_path
+      redirect_to admin_test_questions_path, notice: "Question successfully created"
     else
+      flash.now[:error] = "Could not create Question"
       render :new
     end
   end
@@ -29,16 +30,18 @@ class Admin::QuestionsController < Admin::BaseController
 
   def update
     if @question.update(question_params)
-      redirect_to admin_question_path(@question)
+      redirect_to admin_question_path(@question), notice: "Question successfully updated"
     else
+      flash.now[:error] = "Could not update Question"
       render :edit
     end
   end
 
   def destroy
     if @question.destroy
-      redirect_to test_questions_path(@question)
+      redirect_to admin_test_path(@question.test), notice: "Question successfully deleted"
     else
+      flash.now[:error] = "Could not delete Question"
       render :edit
     end
   end

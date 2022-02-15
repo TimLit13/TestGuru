@@ -2,7 +2,7 @@
   <%= link_to 'Show', admin_answer_path(answer) %> |
   <%= link_to 'Edit', edit_admin_answer_path(answer) %> | 
   <%= link_to 'Delete', admin_answer_path(answer), 
-                      turbo_method: :delete,
+                      method: :delete,
                       data: { confirm: "Are you sure to delete #{answer.body} answer?" 
                       } %>
 </li>

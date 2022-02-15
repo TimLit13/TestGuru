@@ -19,22 +19,25 @@ class Admin::AnswersController < Admin::BaseController
     if @answer.save
       redirect_to admin_answer_path(@answer), notice: 'Answer was successfully created.'
     else
+      flash.now[:error] = "Could not create Answer"
       render :new
     end
   end
 
   def update
     if @answer.update(answer_params)
-      redirect_to admin_answer_path(@answer)
+      redirect_to admin_answer_path(@answer), notice: 'Answer was successfully updated.'
     else
+      flash.now[:error] = "Could not update Answer"
       render :edit
     end
   end
 
   def destroy
     if @answer.destroy
-      redirect_to admin_question_path(@answer.question)
+      redirect_to admin_question_path(@answer.question), notice: 'Answer was successfully deleted.'
     else
+      flash.now[:error] = "Could not delete Answer"
       render :edit
     end
   end
