@@ -14,18 +14,36 @@ class Admin::TestsController < Admin::BaseController
   def edit
   end
 
+  def new
+    @test = Test.new
+  end
+
+  def create
+    @test = Test.new(tests_params)
+    @test.author_id = current_user.id
+
+    if @test.save
+      redirect_to admin_tests_path, notice: 'Successfully created test'
+    else
+      flash.now[:alert] = "Could not create test"
+      render :new
+    end
+  end
+
   def update
     if @test.update(tests_params)
-      redirect_to admin_test_path(@test)
-    else 
+      redirect_to admin_tests_path, notice: 'Successfully updated test'
+    else
+      flash.now[:alert] = "Could not update test"
       render :edit
     end
   end
 
   def destroy
     if @test.destroy
-      redirect_to admin_tests_path
+      redirect_to admin_tests_path, notice: 'Successfully deleted test'
     else
+      flash.now[:alert] = "Could not delete test"
       render :edit
     end
   end
@@ -46,6 +64,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def tests_params
-    params.require(:tests).permit(:title, :level, :category_id)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 end

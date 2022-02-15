@@ -1,5 +1,7 @@
 <h3>Test: <%= @test.title %></h3>
 
+<%= link_to 'Add new question', new_admin_test_question_path(@test) %> 
+
 <table>
   <thead>
     <tr>
@@ -12,5 +14,10 @@
     <%= render partial: 'admin/questions/question', collection: @test.questions %>
   </tbody>
 </table>
+
+
+<%= link_to 'Back', admin_tests_path %> |
+<%= link_to 'Edit', edit_admin_test_path(@test) %> |
+<%= link_to 'Delete', admin_test_path(@test), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <br>
