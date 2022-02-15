@@ -1,5 +1,5 @@
 <div class="nav nav-admin">
-  <%= content_tag :b, (link_to 'TestGuru', tests_path), class: "project-name"%>
+  <%= content_tag :b, (link_to 'TestGuru', admin_tests_path), class: "project-name"%>
   <% if user_signed_in? %>
     <%= content_tag :i, "Welcome, #{current_user.email} guru!", class: "user" %>
     <%= link_to "Logout", destroy_user_session_path, method: :delete %>
