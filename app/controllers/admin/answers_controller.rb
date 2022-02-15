@@ -27,7 +27,7 @@ class Admin::AnswersController < Admin::BaseController
     if @answer.update(answer_params)
       redirect_to @answer
     else
-      render:edit
+      render :edit
     end
   end
 
