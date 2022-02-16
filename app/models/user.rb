@@ -1,4 +1,12 @@
 class User < ApplicationRecord
+
+  devise :database_authenticatable, 
+         :registerable,
+         :recoverable, 
+         :rememberable,
+         :trackable, 
+         :validatable,
+         :confirmable
   
   EMAIL_FORMAT = URI::MailTo::EMAIL_REGEXP
 
@@ -6,9 +14,6 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :author_tests, foreign_key: :author_id, class_name: 'Test'
   
-  has_secure_password
-
-  validates :first_name, :last_name, presence: true
   validates :email, presence: true,
                     format: { with: EMAIL_FORMAT, message: "не является email"},
                     uniqueness: true
@@ -19,5 +24,9 @@ class User < ApplicationRecord
 
   def test_passage(test)
     test_passages.order(created_at: :desc).find_by(test_id: test.id)
+  end
+
+  def admin?
+    self.is_a?(Admin)
   end
 end

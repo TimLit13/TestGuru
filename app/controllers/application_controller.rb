@@ -1,25 +1,17 @@
 class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  helper_method :current_user,
-                :logged_in?
-
-  private
-
-  def authenticate_user!
-    unless current_user
-      cookies[:user_requested_url] = request.path
-      flash[:alert] = 'Login please'
-      redirect_to login_path
-    end
+  def after_sign_in_path_for(current_user)
+    flash[:notice] = "Welcome, #{current_user.first_name}"
+    current_user.admin? ? admin_tests_path : root_path
   end
 
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
   end
 
-  def logged_in?
-    current_user.present?
-  end
 end
