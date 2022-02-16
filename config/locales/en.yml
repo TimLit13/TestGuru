@@ -1,4 +1,36 @@
 en:
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
   tests:
     index:
       header: "Tricky tests"
+
+  test_passages:
+    result:
+      header: "Test %{title} completed!"
+  
+  admin:
+    tests:
+      create:
+        success: 'Test successfully created'
+      index:
+        header: 'All tests'
+
+  tests_mailer:
+    completed_test:
+      subject: "You passed the test"

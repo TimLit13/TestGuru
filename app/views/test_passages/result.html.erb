@@ -1,4 +1,4 @@
-<h3>Test <i><%= @test_passage.test.title %></i></h3>
+<h3>Test <i><%= t('.header', title: @test_passage.test.title) %></i></h3>
 <% if @test_passage.test_passage_success? %>
   <p><font color="green">Successfully completed.</font></p>
   <p><font color="green">
