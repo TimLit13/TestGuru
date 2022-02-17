@@ -1,4 +1,4 @@
-<h3>Passing the <i><%= @test_passage.test.title %></i> test</h3>
+<h3><%= t('.passing') %> <i><%= @test_passage.test.title %></i> <%= t('.test') %></h3>
 
 <b>
   <%= @test_passage.current_question.body %>
@@ -13,8 +13,8 @@
   <% end %>
 
   <p>
-    <%= form.submit 'Next' %>
+    <%= form.submit t('.next') %>
   </p>
 <% end %>
 
-<p>Question <%= @test_passage.question_number %> from <%= questions_count(@test_passage.test) %></p>
+<p><%= t('.question_number', number: @test_passage.question_number, count: questions_count(@test_passage.test)) %></p>

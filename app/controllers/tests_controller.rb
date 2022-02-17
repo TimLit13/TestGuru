@@ -20,6 +20,6 @@ class TestsController < ApplicationController
   end
 
   def rescue_with_record_not_found
-    render inline: "Can't find test with id: #{params[:id]} [status: 404]"
+    render inline: t('.test_not_found', id: params[:id])
   end
 end

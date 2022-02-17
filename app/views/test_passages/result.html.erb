@@ -1,12 +1,12 @@
-<h3>Test <i><%= t('.header', title: @test_passage.test.title) %></i></h3>
+<h3><%= t('.test') %> <i><%= t('.header', title: @test_passage.test.title) %></i></h3>
 <% if @test_passage.test_passage_success? %>
-  <p><font color="green">Successfully completed.</font></p>
+  <p><font color="green"><%= t('.success') %></font></p>
   <p><font color="green">
 <% else%>
-  <p><font color="red">Wasn't completed</font></p>
+  <p><font color="red"><%= t('.unsuccess') %></font></p>
   <p><font color="red">
 <% end %>
 
-You scored <%= (@test_passage.test_passage_score*100).round(0) %> %</p>
+<%= t('.you_scored') %> <%= (@test_passage.test_passage_score*100).round(0) %> %</p>
 
-<%= link_to 'All tests', tests_path %>
+<%= link_to t('.all_tests'), tests_path %>

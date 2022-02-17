@@ -2,14 +2,14 @@
   <%= current_year %>
 </div> 
 <div>
-  Created by Tim
+  <%= t('.created_by') %>
 </div> 
 <div>
   <%= link_to_github('TimLit13', 'TestGuru') %>
 </div> 
 <div>
-  Test taking application
+  <%= t('.describe_project') %>
 </div> 
 <div>
-  Educational project in <%= link_to 'Thinknetica', 'https://thinknetica.com/', target: :_blank %> online school 
+  <%= t('.educational_project') %> <%= link_to t('.school_name'), 'https://thinknetica.com/', target: :_blank %> <%= t('.online_school') %>
 </div> 
