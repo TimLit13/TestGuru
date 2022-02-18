@@ -9,6 +9,8 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+    select:
+      prompt: "Выберите по списку"
 
   shared:
     errors:
