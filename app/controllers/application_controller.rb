@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def default_url_options
-    { lang: I18n.locale }
+    { lang: I18n.locale if I18n.locale != I18n.default_locale }
   end
 
   def after_sign_in_path_for(current_user)
