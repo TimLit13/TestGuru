@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Admin Panel | TestGuru</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,12 +12,15 @@
   </head>
 
   <body>
-    <%= render 'admin/navigation' %>
-    <%= render 'shared/flash' %>
-    <%= yield %>
+    <div class="container">
+      <%= render 'admin/navigation' %>
+      <%= render 'shared/flash' %>
+      <%= yield %>
+    </div>
   </body>
-  <footer style="width: 100%;text-align: center; position: absolute; bottom: 20px">
-    <hr>
-    <%= render 'shared/footer' %>
-  </footer>
+  <div class="container">
+    <footer>
+      <%= render 'shared/footer' %>
+    </footer>
+  </div>
 </html>

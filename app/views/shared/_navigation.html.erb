@@ -4,10 +4,10 @@
     <span class="navbar-text">
       <% if user_signed_in? %>
         <%= content_tag :i, t('.welcome', email: current_user.email)%>
-        <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
+        <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary text-light" %>
       <% else %>
-        <%= link_to t('.sign_up'), new_user_registration_path%> | 
-        <%= link_to t('.log_in'), new_user_session_path %>
+        <%= link_to t('.sign_up'), new_user_registration_path, class: "btn btn-outline-secondary text-light"%>
+        <%= link_to t('.log_in'), new_user_session_path, class: "btn btn-outline-secondary text-light" %>
       <% end %>
     </span>
   </div>

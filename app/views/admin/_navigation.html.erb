@@ -1,10 +1,14 @@
-<div class="nav nav-admin">
-  <%= content_tag :b, (link_to t('.project_name'), admin_tests_path), class: "project-name"%>
-  <% if user_signed_in? %>
-    <%= content_tag :i, t('.welcome', email: current_user.email), class: "user" %>
-    <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to t('.sign_up'), new_user_registration_path %> | 
-    <%= link_to t('.log_in'), new_user_session_path %>
-  <% end %>
+<div class="navbar navbar-light bg-info rounded">
+  <div class="container text-right">
+    <%= link_to t('.project_name'), admin_tests_path, class: "navbar-brand text-light"  %>
+    <span class="navbar-text">
+      <% if user_signed_in? %>
+        <%= content_tag :i, t('.welcome', email: current_user.email), class: "text-light" %>
+        <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: "btn btn-outline-light text-light" %>
+      <% else %>
+        <%= link_to t('.sign_up'), new_user_registration_path, class: "btn btn-outline-light text-light" %>
+        <%= link_to t('.log_in'), new_user_session_path, class: "btn btn-outline-light text-light" %>
+      <% end %>
+    </span>
+  </div>
 </div>

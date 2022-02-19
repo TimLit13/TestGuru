@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(current_user)
-    flash[:notice] = "Welcome, #{current_user.first_name}"
+    flash[:notice] = t('devise.sessions.create.welcome', name: current_user.first_name)
     current_user.admin? ? admin_tests_path : root_path
   end
 

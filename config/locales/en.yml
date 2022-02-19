@@ -1,4 +1,6 @@
 en:
+  application:
+    welcome: "Welcome, %{name}"
   helpers:
     submit:
       test:
