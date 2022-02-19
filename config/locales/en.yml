@@ -48,9 +48,10 @@ en:
       header: "Test %{title} completed!"
       success: "Сompleted"
       unsuccess: "Wasn't completed"
-      you_scored: "You scored"
       all_tests: "All tests"
       test: "Test"
+      result: "Result"
+      percentage: "Score"
     show:
       passing: "Passing the"
       test: "test"

@@ -1,12 +1,15 @@
-<h3><%= t('.test') %> <i><%= t('.header', title: @test_passage.test.title) %></i></h3>
-<% if @test_passage.test_passage_success? %>
-  <p><font color="green"><%= t('.success') %></font></p>
-  <p><font color="green">
-<% else%>
-  <p><font color="red"><%= t('.unsuccess') %></font></p>
-  <p><font color="red">
-<% end %>
+<h3 class="text-center mt-5 mb-5"><%= t('.test') %> <i><%= t('.header', title: @test_passage.test.title) %></i></h3>
 
-<%= t('.you_scored') %> <%= (@test_passage.test_passage_score*100).round(0) %> %</p>
+<dl class="row">
+  <dt class="col-sm-2"><%= t('.result') %></dt>
+  <dd class="col-sm-10 <%= (@test_passage.test_passage_success?) ? "text-success" : "text-danger" %>">
+    <%= (@test_passage.test_passage_success?) ? t('.success') : t('.unsuccess') %>
+  </dd>
 
-<%= link_to t('.all_tests'), tests_path %>
+  <dt class="col-sm-2"><%= t('.percentage') %></dt>
+    <dd class="col-sm-10 <%= (@test_passage.test_passage_success?) ? "text-success" : "text-danger" %>">
+    <%= (@test_passage.test_passage_score*100).round(0).to_s + ' %' %>
+  </dd>
+</dl>
+
+<%= link_to t('.all_tests'), tests_path, class: "btn btn-outline-primary" %>
