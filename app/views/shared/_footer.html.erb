@@ -1,15 +1,18 @@
-<div>
-  <%= current_year %>
-</div> 
-<div>
-  <%= t('.created_by') %>
-</div> 
-<div>
-  <%= link_to_github('TimLit13', 'TestGuru') %>
-</div> 
-<div>
-  <%= t('.describe_project') %>
-</div> 
-<div>
-  <%= t('.educational_project') %> <%= link_to t('.school_name'), 'https://thinknetica.com/', target: :_blank %> <%= t('.online_school') %>
-</div> 
+<div class="container text-muted text-center fixed-bottom mb-3">
+  <hr>
+  <div>
+    <%= current_year %>
+  </div> 
+  <div>
+    <%= t('.created_by') %>
+  </div> 
+  <div>
+    <%= link_to_github('TimLit13', 'TestGuru') %>
+  </div> 
+  <div>
+    <%= t('.describe_project') %>
+  </div> 
+  <div>
+    <%= t('.educational_project') %> <%= link_to t('.school_name'), 'https://thinknetica.com/', target: :_blank, class: "link-secondary" %> <%= t('.online_school') %>
+  </div> 
+</div>

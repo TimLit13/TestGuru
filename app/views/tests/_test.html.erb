@@ -1,5 +1,5 @@
 <tr>  
   <td><%= test.title %></td>
-  <td align="center"><%= questions_count(test) %></td>
-  <td><%= button_to t('.start'), start_test_path(test) %></td>
+  <td class="text-center"><%= questions_count(test) %></td>
+  <td class="text-center"><%= button_to t('.start'), start_test_path(test), class: "btn btn-sm btn-outline-success" %></td>
 </tr>

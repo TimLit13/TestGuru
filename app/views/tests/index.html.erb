@@ -1,17 +1,17 @@
-<h3><%= t('.header') %></h3>
+<h3 class="text-center mt-5"><%= t('.header') %></h3>
 
-<table>
-  <thead>
-    <tr>
-      <th><%= t('.title') %></th>
-      <th><%= t('.questions_number') %></th>
-      <th><%= t('.actions') %></th>
-    </tr>
-  </thead>
+<div class="container">
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th scope="col" class="col-md-6"><%= t('.title') %></th>
+        <th scope="col" class="col-md-4 text-center"><%= t('.questions_number') %></th>
+        <th scope="col" class="col-md-2 text-center"><%= t('.actions') %></th>
+      </tr>
+    </thead>
 
-  <tbody>
-      <%= render @tests %>
-  </tbody>
-</table>
-
-<br>
+    <tbody>
+        <%= render @tests %>
+    </tbody>
+  </table>
+</div>

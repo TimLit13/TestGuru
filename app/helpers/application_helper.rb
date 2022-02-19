@@ -4,6 +4,6 @@ module ApplicationHelper
   end
 
   def link_to_github(author, repo)
-    link_to 'Github', "https://github.com/#{author}/#{repo}", target: :_blank
+    link_to 'Github', "https://github.com/#{author}/#{repo}", target: :_blank, class: "link-secondary"
   end
 end
