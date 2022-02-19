@@ -31,6 +31,7 @@ ru:
       log_out: "Выйти"
       sign_up: "Зарегистрироваться"
       log_in: "Войти"
+      admin_panel: "Admin панель"
 
   tests:
     index:

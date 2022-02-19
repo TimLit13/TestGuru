@@ -31,8 +31,7 @@ en:
       log_out: "Logout"
       sign_up: "Sign up"
       log_in: "Log in"
-
-
+      admin_panel: "Admin panel"
 
   tests:
     index:

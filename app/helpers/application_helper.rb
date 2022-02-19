@@ -1,10 +1,10 @@
 module ApplicationHelper
-    ALERTS = {
-      notice: "info",
-      error: "danger",
-      success: "success",
-      alert: "warning"
-    }
+  ALERTS = {
+    notice: "info",
+    error: "danger",
+    success: "success",
+    alert: "warning"
+  }
 
   def current_year
     Time.now.year
