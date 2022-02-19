@@ -1,33 +1,114 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "level"
+        category_id: "Category"
+    select:
+      prompt: "Select from list"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    footer:
+      created_by: "Created by Tim"
+      describe_project: "Test taking application"
+      educational_project: "Educational project"
+      school_name: "Thinknetica"
+      online_school: "online school"
+    navigation:
+      app_name: "TestGuru"
+      welcome: "Welcome %{email} guru!"
+      log_out: "Logout"
+      sign_up: "Sign up"
+      log_in: "Log in"
+
+
+
+  tests:
+    index:
+      header: "Tricky tests"
+      title: "Title"
+      questions_number: "Number of questions"
+      actions: "Actions"
+    test:
+      start: "Start"
+    rescue_with_record_not_found:
+        test_not_found: "Can't find test with id: %{id} [status: 404]"
+
+  test_passages:
+    result:
+      header: "Test %{title} completed!"
+      success: "Сompleted"
+      unsuccess: "Wasn't completed"
+      you_scored: "You scored"
+      all_tests: "All tests"
+      test: "Test"
+    show:
+      passing: "Passing the"
+      test: "test"
+      question_number: "Question %{number} from %{count}"
+      next: "Next"
+  
+  admin:
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirmation: "Are you sure?"
+    tests:
+      create:
+        success: 'Test successfully created'
+        unsuccess: "Can't create tests"
+      index:
+        header: 'All tests'
+        new_test: "New Test"
+        title: "Title"
+        questions_number: "Number of questions"
+        actions: "Actions"
+      show:
+        test_name: "Test:"
+        add_new_question: "Add new question"
+        title: "Title"
+        actions: "Actions"
+        back: "Back"
+        edit: "Edit"
+        delete: "Delete"
+        confirmation: "Are you shure?"
+      new:
+        create_new_test: "Create new test"
+        back: "Back"
+      update:
+        success_updated: 'Successfully updated test'
+        not_updated: "Could not update test"
+      destroy:
+        success_deleted: 'Successfully deleted test'
+        success_deleted: "Can't delete test"
+      rescue_with_record_not_found:
+        test_not_found: "Can't find test with id: %{id} [status: 404]"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirmation: "Are you sure?"
+      edit:
+        edit: "Edit"
+        back: "Back"
+    navigation:
+      project_name: "TestGuru"
+      welcome: "Welcome %{email} guru!"
+      log_out: "Logout"
+      sign_up: "Sign up"
+      log_in: "Log in"
+
+  tests_mailer:
+    completed_test:
+      subject: "You passed the test"

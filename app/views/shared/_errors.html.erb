@@ -1,7 +1,10 @@
 <% if resource.errors.any? %>
 asdfasdf
   <div>
-    <h3><%= pluralize(resource.errors.count, 'error') %>:</h3>
+    <h3>
+      <%= t('.header', count: resource.errors.count) %>:
+    </h3>
+
     <ul>
       <% resource.errors.full_messages.each do |message| %>
         <li><%= message %></li>

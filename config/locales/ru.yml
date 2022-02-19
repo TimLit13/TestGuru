@@ -1,0 +1,114 @@
+ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Выберите по списку"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+    footer:
+      created_by: "Создано: Tim"
+      describe_project: "Приложение для прохождения тестов"
+      educational_project: "Учебный проект"
+      school_name: "Thinknetica"
+      online_school: "онлайн школа"
+    navigation:
+      app_name: "TestGuru"
+      welcome: "Добро пожаловать %{email} гуру!"
+      log_out: "Выйти"
+      sign_up: "Зарегистрироваться"
+      log_in: "Войти"
+
+  tests:
+    index:
+      header: 'Доступные тесты'
+      title: "Название"
+      questions_number: "Количество вопросов"
+      actions: "Действия"
+    test:
+      start: "Начать"
+    rescue_with_record_not_found:
+        test_not_found: "Не удалось найти тест с id: %{id} [status: 404]"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+      success: "пройден"
+      unsuccess: "Не пройден"
+      you_scored: "Вы набрали"
+      all_tests: "Все тесты"
+      test: "Тест"
+    show:
+      passing: "Прохождение"
+      test: "теста"
+      question_number: "Вопрос %{number} из %{count}"
+      next: "Дальше"
+  
+  admin:
+    questions:
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirmation: "Вы уверены?"
+    tests:
+      create:
+        success: 'Тест успешно создан'
+        unsuccess: 'Не удалось создать тест'
+      index:
+        header: 'Все тесты'
+        new_test: "Новый тест"
+        title: "Название"
+        questions_number: "Количество вопросов"
+        actions: "Действия"
+      show:
+        test_name: "Тест:"
+        add_new_question: "Добавить новый вопрос"
+        title: "Название"
+        actions: "Действия"
+        back: "Назад"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirmation: "Вы уверены?"
+      new:
+        create_new_test: "Создать новый тест"
+        back: "Назад"
+      update:
+        success_updated: 'Тест успешно обновлен'
+        not_updated: "Не удалось обновить тест"
+      destroy:
+        success_deleted: 'Тест успешно удален'
+        success_deleted: "Не удалось удалить тест"
+      rescue_with_record_not_found:
+        test_not_found: "Не удалось найти тест с id: %{id} [status: 404]"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirmation: "Вы уверены?"
+      edit:
+        edit: "Редактировать"
+        back: "Назад"
+    navigation:
+      project_name: "TestGuru"
+      welcome: "Добро пожаловать %{email} гуру!"
+      log_out: "Выйти"
+      sign_up: "Зарегистрироваться"
+      log_in: "Войти"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы только что прошли тест"
