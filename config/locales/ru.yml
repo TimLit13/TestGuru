@@ -31,6 +31,7 @@ ru:
       log_out: "Выйти"
       sign_up: "Зарегистрироваться"
       log_in: "Войти"
+      admin_panel: "Admin панель"
 
   tests:
     index:
@@ -48,9 +49,10 @@ ru:
       header: "Тест %{title} успешно завершен!"
       success: "пройден"
       unsuccess: "Не пройден"
-      you_scored: "Вы набрали"
       all_tests: "Все тесты"
       test: "Тест"
+      result: "Результат"
+      percentage: "Итого набрано"
     show:
       passing: "Прохождение"
       test: "теста"
