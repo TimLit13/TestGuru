@@ -60,7 +60,7 @@ ru:
       next: "Дальше"
       save_gist: "Сохранить этот вопрос в GitHub gist"
     gist:
-      success: "Gist успешно создан"
+      success: " успешно создан"
       unsuccess: "Gist не был создан"
   
   admin:

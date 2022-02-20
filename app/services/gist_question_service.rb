@@ -1,5 +1,7 @@
 class GistQuestionService
 
+  attr_reader :client
+
   ACCESS_TOKEN = ENV["GITHUB_TOKEN_FOR_TEST_GURU"]
   # client: nil - для тестирования 
   # (использования иного клиента вместо git_hub_client)

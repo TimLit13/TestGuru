@@ -60,7 +60,7 @@ en:
       next: "Next"
       save_gist: "Save this question in GitHub gist"
     gist:
-      success: "Gist successfully created"
+      success: " successfully created"
       unsuccess: "Gist wasn't created"
   
   admin:
