@@ -58,6 +58,10 @@ en:
       test: "test"
       question_number: "Question %{number} from %{count}"
       next: "Next"
+      save_gist: "Save this question in GitHub gist"
+    gist:
+      success: "Gist successfully created"
+      unsuccess: "Gist wasn't created"
   
   admin:
     questions:
@@ -114,3 +118,11 @@ en:
   tests_mailer:
     completed_test:
       subject: "You passed the test"
+
+  services:
+    gist_question_service:
+      question_from: "Question from %{test}"
+      file_name: "question_from_test.txt"
+      question: "Question:"
+      answers: "Answers:"
+

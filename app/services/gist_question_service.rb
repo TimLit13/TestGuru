@@ -12,13 +12,17 @@ class GistQuestionService
     @client.create_gist(gist_params)
   end
 
+  def success?
+    @client.response.status == 201
+  end
+
   private
 
   def gist_params
     {
-      description: "Question from #{@test.title}",
+      description: (I18n.t('services.gist_question_service.question_from', test: @test.title)),
       files: {
-        'test-guru-question.txt' => {
+        (I18n.t('services.gist_question_service.file_name')) => {
           content: gist_content
         }
       }
@@ -27,9 +31,9 @@ class GistQuestionService
 
   def gist_content
     content = []
-    content.push("Question:")
-    content.push(@question.body)
-    content.push("Answers:")
+    content.push(I18n.t('services.gist_question_service.question'))
+    content.push(@question.body + "\n")
+    content.push(I18n.t('services.gist_question_service.answers'))
     content += @question.answers.pluck(:body)
     content.join("\n")
   end

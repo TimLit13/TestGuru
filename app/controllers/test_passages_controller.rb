@@ -1,6 +1,6 @@
 class TestPassagesController < ApplicationController
 
-  before_action :set_test_passage, only: %i[show result update]
+  before_action :set_test_passage, only: %i[show result update gist]
 
   # показывает форму
   def show
@@ -20,10 +20,20 @@ class TestPassagesController < ApplicationController
     end
   end
 
+  def gist
+    result = GistQuestionService.new(@test_passage.current_question).call
+
+    redirect_to @test_passage, flash_options(result)
+  end
+
   private
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def flash_options(result)
+    result.success? ? { notice: t('.success') } : { alert: t('.unsuccess')  }
   end
 
 end
