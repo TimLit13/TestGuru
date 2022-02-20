@@ -21,9 +21,10 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@test_passage.current_question).call
+    gist_service = GistQuestionService.new(@test_passage.current_question)
+    result = gist_service.call
 
-    redirect_to @test_passage, flash_options(result)
+    redirect_to @test_passage, flash_options(gist_service)
   end
 
   private
@@ -32,8 +33,8 @@ class TestPassagesController < ApplicationController
     @test_passage = TestPassage.find(params[:id])
   end
 
-  def flash_options(result)
-    result.success? ? { notice: t('.success') } : { alert: t('.unsuccess')  }
+  def flash_options(gist_service)
+    gist_service.success? ? { notice: t('.success') } : { alert:  t('.unsuccess') }
   end
 
 end

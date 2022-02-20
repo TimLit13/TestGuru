@@ -1,11 +1,12 @@
 class GistQuestionService
 
+  ACCESS_TOKEN = ENV["GITHUB_TOKEN_FOR_TEST_GURU"]
   # client: nil - для тестирования 
   # (использования иного клиента вместо git_hub_client)
-  def initialize(question, client: nil)
+  def initialize(question, client = client_default)
     @question = question
     @test = @question.test
-    @client = client || GitHubClient.new
+    @client = client
   end
 
   def call
@@ -13,7 +14,7 @@ class GistQuestionService
   end
 
   def success?
-    @client.response.status == 201
+    @client.last_response.status == 201
   end
 
   private
@@ -36,6 +37,10 @@ class GistQuestionService
     content.push(I18n.t('services.gist_question_service.answers'))
     content += @question.answers.pluck(:body)
     content.join("\n")
+  end
+
+  def client_default
+    Octokit::Client.new(access_token: ACCESS_TOKEN)
   end
 
 end
