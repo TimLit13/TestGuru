@@ -64,6 +64,12 @@ ru:
       unsuccess: "Gist не был создан"
   
   admin:
+    gists:
+      index:
+        header: "Все Gists"
+        user_email: "Email пользователя"
+        question: "Вопрос"
+        url: "Адрес"
     questions:
       question:
         show: "Показать"
@@ -114,6 +120,7 @@ ru:
       log_out: "Выйти"
       sign_up: "Зарегистрироваться"
       log_in: "Войти"
+      gists: "Все Gists"
 
   tests_mailer:
     completed_test:

@@ -24,6 +24,8 @@ class TestPassagesController < ApplicationController
     gist_service = GistQuestionService.new(@test_passage.current_question)
     result = gist_service.call
 
+    create_gist(gist_service, result) if gist_service.success?
+
     redirect_to @test_passage, flash_options(gist_service, result)
   end
 
@@ -37,4 +39,12 @@ class TestPassagesController < ApplicationController
     gist_service.success? ? { notice: "#{ view_context.link_to('gist', result.html_url) }" + t('.success') } : { alert:  t('.unsuccess') }
   end
 # , link: result.html_url).}
+  def create_gist(gist_service, result)
+    current_user.gists.create(
+      author_id: current_user.id,
+      question_id: @test_passage.current_question.id,
+      url: result.html_url
+    )
+  end
+
 end

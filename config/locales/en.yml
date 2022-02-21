@@ -64,6 +64,12 @@ en:
       unsuccess: "Gist wasn't created"
   
   admin:
+    gists:
+      index:
+        header: "All Gists"
+        user_email: "User email"
+        question: "Question"
+        url: "Url"
     questions:
       question:
         show: "Show"
@@ -114,6 +120,7 @@ en:
       log_out: "Logout"
       sign_up: "Sign up"
       log_in: "Log in"
+      gists: "All Gists"
 
   tests_mailer:
     completed_test:
