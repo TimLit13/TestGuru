@@ -58,8 +58,18 @@ ru:
       test: "теста"
       question_number: "Вопрос %{number} из %{count}"
       next: "Дальше"
+      save_gist: "Сохранить этот вопрос в GitHub gist"
+    gist:
+      success: " успешно создан"
+      unsuccess: "Gist не был создан"
   
   admin:
+    gists:
+      index:
+        header: "Все Gists"
+        user_email: "Email пользователя"
+        question: "Вопрос"
+        url: "Адрес"
     questions:
       question:
         show: "Показать"
@@ -110,7 +120,15 @@ ru:
       log_out: "Выйти"
       sign_up: "Зарегистрироваться"
       log_in: "Войти"
+      gists: "Все Gists"
 
   tests_mailer:
     completed_test:
       subject: "Вы только что прошли тест"
+
+  services:
+    gist_question_service:
+      question_from: "Question from %{test}"
+      file_name: "question_from_test.txt"
+      question: "Question:"
+      answers: "Answers:"

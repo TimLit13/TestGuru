@@ -12,9 +12,11 @@
           <%= b.label %>
         </li>
       <% end %>
-      <div></div>
       <div class="mt-3">
-        <%= form.submit t('.next'), class: "btn btn-outline-dark" %>
+        <%= link_to t('.save_gist'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-sm btn-outline-secondary' %>
+      </div>
+      <div class="mt-3">
+        <%= form.submit t('.next'), class: "btn btn-outline-success" %>
       </div>
     <% end %>
   </div>

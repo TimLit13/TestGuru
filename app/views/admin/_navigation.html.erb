@@ -2,6 +2,9 @@
   <div class="container text-right">
     <%= link_to t('.project_name'), root_path, class: "navbar-brand text-light"  %>
     <span class="navbar-text">
+      <% if Gist.any? %>
+        <%= link_to t('.gists'), admin_gists_path, class: "btn btn-outline-secondary text-light", target: :_blank %>
+      <% end %>
       <% if user_signed_in? %>
         <%= content_tag :i, t('.welcome', email: current_user.email), class: "text-light" %>
         <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: "btn btn-outline-light text-light" %>

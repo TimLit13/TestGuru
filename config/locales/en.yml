@@ -58,8 +58,18 @@ en:
       test: "test"
       question_number: "Question %{number} from %{count}"
       next: "Next"
+      save_gist: "Save this question in GitHub gist"
+    gist:
+      success: " successfully created"
+      unsuccess: "Gist wasn't created"
   
   admin:
+    gists:
+      index:
+        header: "All Gists"
+        user_email: "User email"
+        question: "Question"
+        url: "Url"
     questions:
       question:
         show: "Show"
@@ -110,7 +120,16 @@ en:
       log_out: "Logout"
       sign_up: "Sign up"
       log_in: "Log in"
+      gists: "All Gists"
 
   tests_mailer:
     completed_test:
       subject: "You passed the test"
+
+  services:
+    gist_question_service:
+      question_from: "Question from %{test}"
+      file_name: "question_from_test.txt"
+      question: "Question:"
+      answers: "Answers:"
+

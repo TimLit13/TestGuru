@@ -1,6 +1,6 @@
 class TestPassagesController < ApplicationController
 
-  before_action :set_test_passage, only: %i[show result update]
+  before_action :set_test_passage, only: %i[show result update gist]
 
   # показывает форму
   def show
@@ -20,10 +20,33 @@ class TestPassagesController < ApplicationController
     end
   end
 
+  def gist
+    gist_service = GistQuestionService.new(@test_passage.current_question)
+    result = gist_service.call
+
+    if gist_service.success?
+      create_gist(result)
+      flash[:notice] = "#{ view_context.link_to('gist', result.html_url, target: :_blank) }" + t('.success') 
+    else
+      flash[:alert] = t('.unsuccess') 
+    end 
+
+    redirect_to @test_passage
+  end
+
   private
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+# , link: result.html_url).}
+  def create_gist(result)
+    current_user.gists.create(
+      author_id: current_user.id,
+      question_id: @test_passage.current_question.id,
+      url: result.html_url
+    )
   end
 
 end
