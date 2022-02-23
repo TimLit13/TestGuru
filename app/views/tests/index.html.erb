@@ -4,7 +4,11 @@
   <table class="table table-striped mt-5">
     <thead>
       <tr>
-        <th scope="col" class="col-md-6"><%= t('.title') %></th>
+        <th scope="col" class="col-md-6 sort-by-title pointer">
+          <%= t('.title') %>
+          <%= octicon 'arrow-up', class: 'text-success hide mt-1' %>
+          <%= octicon 'arrow-down', class: 'text-success hide mt-1' %>      
+        </th>
         <th scope="col" class="col-md-4 text-center"><%= t('.questions_number') %></th>
         <th scope="col" class="col-md-2 text-center"><%= t('.actions') %></th>
       </tr>
