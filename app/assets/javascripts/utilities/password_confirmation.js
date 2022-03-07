@@ -22,11 +22,32 @@ function highligthPasswordConfirmation() {
   }
 
   if (passwordConfirmation.value === '') {
+    hideIcons();
     return;
   } else if (password.value === passwordConfirmation.value) {
       passwordConfirmation.classList.add('highlite-green');
+      showRightIcon();
   } else {
       passwordConfirmation.classList.add('highlite-red');
+      showWrongIcon();
   }
 }
 
+function showRightIcon() {
+  if (document.querySelector('.octicon-right').classList.contains('hide')) {
+    document.querySelector('.octicon-right').classList.remove('hide');
+    document.querySelector('.octicon-wrong').classList.add('hide');   
+  }
+} 
+
+function showWrongIcon() {
+  if (document.querySelector('.octicon-wrong').classList.contains('hide')) {
+    document.querySelector('.octicon-wrong').classList.remove('hide');
+    document.querySelector('.octicon-right').classList.add('hide');   
+  }
+} 
+
+function hideIcons() {
+  document.querySelector('.octicon-wrong').classList.add('hide');
+  document.querySelector('.octicon-right').classList.add('hide');  
+}
