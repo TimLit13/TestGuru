@@ -23,8 +23,8 @@ function highligthPasswordConfirmation() {
 
   if (passwordConfirmation.value === '') {
     hideIcons();
-    return;
-  } else if (password.value === passwordConfirmation.value) {
+  }
+  if (password.value === passwordConfirmation.value) {
       passwordConfirmation.classList.add('highlite-green');
       showRightIcon();
   } else {
