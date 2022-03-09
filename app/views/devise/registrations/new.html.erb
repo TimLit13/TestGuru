@@ -23,16 +23,20 @@
     <% if @minimum_password_length %>
     <em><%= t('.min_password', min: @minimum_password_length)%></em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "password-field" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "password-confirmation-field" %>
+    <%= octicon 'x', class: 'octicon-wrong text-danger hide mt-1' %>
+    <%= octicon 'key', class: 'octicon-right text-success hide mt-1' %>
   </div>
-
-  <div class="actions">
-    <%= f.submit t('.sign_up') %>
+  <div class="">
+    
+  </div>
+  <div class="actions mt-3">
+    <%= f.submit t('.sign_up'), class: "btn btn-secondary" %>
   </div>
 <% end %>
 
