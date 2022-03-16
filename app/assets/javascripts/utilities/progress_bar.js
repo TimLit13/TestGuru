@@ -1,6 +1,5 @@
 document.addEventListener('turbolinks:load', function() {
   let progressBar = document.querySelector('#progress-bar');
-  console.log('lalфывафывафвыафывафвыаala');
 
   if (progressBar) {
     displayProgressBar(progressBar);
@@ -10,7 +9,6 @@ document.addEventListener('turbolinks:load', function() {
 function displayProgressBar(progressBar) {
   let progressValue = progressBar.dataset.progress;
   console.log(progressValue);
-  console.log('lalala');
 
   progressBar.setAttribute('role', "progressbar");
   progressBar.setAttribute('aria-valuemin', '0 %');
