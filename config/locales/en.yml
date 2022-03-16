@@ -101,6 +101,12 @@ en:
       update:
         success_updated: 'Successfully updated test'
         not_updated: "Could not update test"
+      update_inline:
+        success_updated: 'Successfully updated test'
+        not_updated: "Could not update test"
+      form_inline:
+        submit: "OK"
+
       destroy:
         success_deleted: 'Successfully deleted test'
         success_deleted: "Can't delete test"

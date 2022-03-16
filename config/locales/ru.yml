@@ -101,6 +101,12 @@ ru:
       update:
         success_updated: 'Тест успешно обновлен'
         not_updated: "Не удалось обновить тест"
+      update_inline:
+        success_updated: 'Тест успешно обновлен'
+        not_updated: "Не удалось обновить тест"
+      form_inline:
+        submit: "OK"
+
       destroy:
         success_deleted: 'Тест успешно удален'
         success_deleted: "Не удалось удалить тест"

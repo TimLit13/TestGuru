@@ -21,6 +21,13 @@
     <% end %>
   </div>
   <div class="card-footer text-muted">
-    <%= t('.question_number', number: @test_passage.question_number, count: questions_count(@test_passage.test)) %>
+
+    <div class="progress mt-2">
+      <%= content_tag :div,  test_passage_percentage(@test_passage.question_number, questions_count(@test_passage.test)), class: 'progress-bar progress-bar-striped progress-bar-animated bg-success', id: 'progress-bar', data: {progress: test_passage_percentage(@test_passage.question_number, questions_count(@test_passage.test))} %>
+    </div>
+
+    <div class="text-center">
+      <%= t('.question_number', number: @test_passage.question_number, count: questions_count(@test_passage.test)) %>
+    </div>
   </div>  
 </div>  
