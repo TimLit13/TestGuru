@@ -1,5 +1,20 @@
 class DowngradeToRails6 < ActiveRecord::Migration[6.1]
   def change
+    create_table :users do |t|
+      t.string :first_name
+      t.string :last_name
+      t.string :email
+      t.boolean :admin
+
+      t.timestamps
+    end
+
+    create_table :categories do |t|
+      t.string :title
+
+      t.timestamps
+    end
+
     create_table :tests do |t|
       t.string :title
       t.integer :level
@@ -22,19 +37,5 @@ class DowngradeToRails6 < ActiveRecord::Migration[6.1]
       t.timestamps
     end
 
-    create_table :users do |t|
-      t.string :first_name
-      t.string :last_name
-      t.string :email
-      t.boolean :admin
-
-      t.timestamps
-    end
-
-    create_table :categories do |t|
-      t.string :title
-
-      t.timestamps
-    end
   end
 end
