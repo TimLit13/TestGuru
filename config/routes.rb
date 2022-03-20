@@ -21,6 +21,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'contact_us', to: "contacts#contact_us"
+  post 'contact_us', to: "contacts#send_question"
+
   namespace :admin do
     resources :gists, only: %i[show index]
 

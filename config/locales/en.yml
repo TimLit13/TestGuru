@@ -32,6 +32,7 @@ en:
       sign_up: "Sign up"
       log_in: "Log in"
       admin_panel: "Admin panel"
+      contact_us: "Contact us"
 
   tests:
     index:
@@ -62,6 +63,17 @@ en:
     gist:
       success: " successfully created"
       unsuccess: "Gist wasn't created"
+
+  contacts:
+    send_question:
+      deliver_success: "Your message successfully sent"
+      deliver_unsuccess: "Your message wasn't send"
+    contact_us:
+      header: "Contact us"
+    form:
+      your_question: "Your Question"
+      enter_text_here: "Please write your question here"
+      submit: "Send question"
   
   admin:
     gists:

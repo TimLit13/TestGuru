@@ -32,6 +32,7 @@ ru:
       sign_up: "Зарегистрироваться"
       log_in: "Войти"
       admin_panel: "Admin панель"
+      contact_us: "Связаться с нами"
 
   tests:
     index:
@@ -62,6 +63,17 @@ ru:
     gist:
       success: " успешно создан"
       unsuccess: "Gist не был создан"
+
+  contacts:
+    send_question:
+      deliver_success: "Ваше сообщение успешно отправлено."
+      deliver_unsuccess: "Ваше сообщение не отправлено."
+    contact_us:
+      header: "Связаться с нами"
+    form:
+      your_question: "Ваш вопрос"
+      enter_text_here: "Напишите, пожалуйста, свой вопрос здесь"
+      submit: "Отправить вопрос"
   
   admin:
     gists:
