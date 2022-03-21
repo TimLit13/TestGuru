@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   before_update :before_update_set_next_question
 
   def accept!(answer_ids)
-    self.correct_question += 1 if correct_answer?(answer_ids)
+    self.correct_question += 1 if (answer_ids && correct_answer?(answer_ids))
     save!
   end
 
