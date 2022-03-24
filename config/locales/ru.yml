@@ -98,6 +98,7 @@ ru:
         title: "Название"
         questions_number: "Количество вопросов"
         actions: "Действия"
+        test_ready: "Готовность"
       show:
         test_name: "Тест:"
         add_new_question: "Добавить новый вопрос"
@@ -118,7 +119,7 @@ ru:
         not_updated: "Не удалось обновить тест"
       form_inline:
         submit: "OK"
-
+        test_ready: "Готов"
       destroy:
         success_deleted: 'Тест успешно удален'
         success_deleted: "Не удалось удалить тест"
@@ -129,6 +130,8 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirmation: "Вы уверены?"
+        badge_test_ready: "Готов"
+        badge_test_unready: "Не готов"
       edit:
         edit: "Редактировать"
         back: "Назад"

@@ -8,6 +8,13 @@
   </td>
   
   <td><%= questions_count(test) %></td>
+  <td class="text-center">
+    <% if test.ready %>
+      <button type="button" class="btn btn-sm btn-success" disabled><%= t('.badge_test_ready') %></button>
+    <% else %>
+      <button type="button" class="btn btn-sm btn-danger" disabled><%= t('.badge_test_unready') %></button>
+    <% end %>
+  </td>
   <td>
     <%= link_to t('.show'), admin_test_path(test), class: "btn btn-sm btn-outline-success" %>
     <%= link_to t('.edit'), edit_admin_test_path(test), class: "btn btn-sm btn-outline-warning form-inline-link", data: { test_id: test.id } %>

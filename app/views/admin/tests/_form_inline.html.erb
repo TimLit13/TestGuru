@@ -5,5 +5,8 @@
               data: { test_id: test.id } do |form| %>
 
   <%= form.text_field :title, class: "form-control mr-2" %>
-  <%= form.submit t('.submit'), class: 'btn btn-outline-primary' %>
+  <%= form.check_box :ready %>
+  <%= form.label :ready, t('.test_ready') %>
+  <%= content_tag :br %>
+  <%= form.submit t('.submit'), class: 'btn btn-outline-success' %>
 <% end %>
