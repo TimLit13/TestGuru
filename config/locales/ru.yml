@@ -63,6 +63,8 @@ ru:
     gist:
       success: " успешно создан"
       unsuccess: "Gist не был создан"
+    update:
+      test_not_found: "Тест не найден"  
 
   contacts:
     send_question:

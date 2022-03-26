@@ -63,6 +63,8 @@ en:
     gist:
       success: " successfully created"
       unsuccess: "Gist wasn't created"
+    update:
+      test_not_found: "Test not found"      
 
   contacts:
     send_question:
