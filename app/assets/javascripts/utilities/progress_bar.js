@@ -8,7 +8,6 @@ document.addEventListener('turbolinks:load', function() {
 
 function displayProgressBar(progressBar) {
   let progressValue = progressBar.dataset.progress;
-  console.log(progressValue);
 
   progressBar.setAttribute('role', "progressbar");
   progressBar.setAttribute('aria-valuemin', '0 %');

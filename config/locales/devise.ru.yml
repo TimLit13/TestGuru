@@ -20,7 +20,7 @@ ru:
       unconfirmed: "Вы должны подтвердить вашу учётную запись."
     mailer:
       confirmation_instructions:
-        welcome: "Добро пожаловать, %{@email}!"
+        welcome: "Добро пожаловать, %{email}!"
         can_confirm_by_link: "Вы можете подтвердить свою почту перейдя по ссылке:"
         confirm_account: "Подтвердить аккаунт"
         subject: "Инструкции по подтверждению учётной записи."

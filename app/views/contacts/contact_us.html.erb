@@ -1,0 +1,11 @@
+<%= content_tag :div, class: "contact-us" do %>
+
+  <%= content_tag :div, class: "contact-us-header" do %>
+    <% content_tag :h3, t(".header") %>
+  <% end %> 
+
+  <%= content_tag :div, class: "contact-us-form" do %>
+    <%= render 'form' %>
+  <% end %>
+
+<% end %>

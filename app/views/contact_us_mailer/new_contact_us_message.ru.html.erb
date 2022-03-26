@@ -1,0 +1,6 @@
+<%= content_tag :h3  do %> 
+  <%= content_tag :i, "#{@contact_us_question[:email]} (#{@contact_us_question[:name]})" %> 
+  <%= content_tag :span, " отправил сообщение со страницы Задать вопрос" %>
+<% end %>
+
+<%= content_tag :p,  @contact_us_question[:question_body] %>

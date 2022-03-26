@@ -1,0 +1,21 @@
+<%= form_with(url: contact_us_path, method: :post, local: true) do |form| %>
+
+  <%= content_tag :p, class: "hide" do %>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :name, value: current_user.first_name %>
+  <% end %>
+
+  <%= content_tag :p, class: "hide" do %>
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :email, value: current_user.email %>
+  <% end %>
+
+  <%= content_tag :h6 do %>
+    <%= form.label t('.your_question') %>
+  <% end %>
+  <%= content_tag :p do %>
+    <%= form.text_area :question_body, id: :question_body, placeholder: t('.enter_text_here'), size: "50x10" %>
+  <% end %>
+
+    <%= form.submit t('.submit'), class: 'btn btn-outline-success'  %>
+<% end %>

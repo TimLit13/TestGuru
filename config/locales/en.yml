@@ -32,6 +32,7 @@ en:
       sign_up: "Sign up"
       log_in: "Log in"
       admin_panel: "Admin panel"
+      contact_us: "Contact us"
 
   tests:
     index:
@@ -62,6 +63,17 @@ en:
     gist:
       success: " successfully created"
       unsuccess: "Gist wasn't created"
+
+  contacts:
+    send_question:
+      deliver_success: "Your message successfully sent"
+      deliver_unsuccess: "Your message wasn't send"
+    contact_us:
+      header: "Contact us"
+    form:
+      your_question: "Your Question"
+      enter_text_here: "Please write your question here"
+      submit: "Send question"
   
   admin:
     gists:
@@ -86,6 +98,7 @@ en:
         title: "Title"
         questions_number: "Number of questions"
         actions: "Actions"
+        test_ready: "Ready"
       show:
         test_name: "Test:"
         add_new_question: "Add new question"
@@ -106,7 +119,7 @@ en:
         not_updated: "Could not update test"
       form_inline:
         submit: "OK"
-
+        test_ready: "Ready"
       destroy:
         success_deleted: 'Successfully deleted test'
         success_deleted: "Can't delete test"
@@ -117,6 +130,8 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirmation: "Are you sure?"
+        badge_test_ready: "Готов"
+        badge_test_unready: "Не готов"
       edit:
         edit: "Edit"
         back: "Back"

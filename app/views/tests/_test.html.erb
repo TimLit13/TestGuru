@@ -1,5 +1,11 @@
 <tr>  
   <td><%= test.title %></td>
   <td class="text-center"><%= questions_count(test) %></td>
-  <td class="text-center"><%= button_to t('.start'), start_test_path(test), class: "btn btn-sm btn-outline-success" %></td>
+  <td class="text-center">
+    <% if test.questions.any? %>
+      <%= button_to t('.start'), start_test_path(test), class: "btn btn-sm btn-outline-success" %>
+    <% else%>
+      <%= button_to t('.start'), start_test_path(test), class: "btn btn-sm btn-outline-success disabled" %>
+    <% end %>
+    </td>
 </tr>
