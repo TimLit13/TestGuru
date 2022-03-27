@@ -10,6 +10,8 @@ class User < ApplicationRecord
   
   EMAIL_FORMAT = URI::MailTo::EMAIL_REGEXP
 
+  has_many :achievements, dependent: :destroy
+  has_many :badges, through: :achievements
   has_many :gists, foreign_key: :author_id, class_name: 'Gist'
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages

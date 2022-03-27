@@ -21,6 +21,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :badges, only: %i[index show]
+
+  resources :achievements, only: :index
+  
   get 'contact_us', to: "contacts#contact_us"
   post 'contact_us', to: "contacts#send_question"
 
@@ -34,5 +38,8 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
+
+    resources :badges
+    resources :achievements, only: :index
   end
 end
