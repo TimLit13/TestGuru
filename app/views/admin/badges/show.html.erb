@@ -1,0 +1,13 @@
+<h3><%= t('.badge_header')%></h3>
+
+<div>
+  <%= @badge.title %>
+</div>
+
+<hr>
+
+<div>
+  <%= image_tag(@badge.image_url , alt: t('.alt_image_tag'))  %>
+</div>
+
+<%= link_to t('.back'), admin_badges_path %>
