@@ -7,7 +7,7 @@
 <hr>
 
 <div>
-  <%= image_tag(@badge.image_url , alt: t('.alt_image_tag'))  %>
+  <%= octicon @badge.image_url, class: 'text-danger', width: 200   %>
 </div>
 
 <%= link_to t('.back'), admin_badges_path %>
