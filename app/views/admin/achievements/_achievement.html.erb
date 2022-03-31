@@ -1,0 +1,15 @@
+<tr>    
+  <td>
+    <%= octicon achievement.badge.image_url, class: 'text-danger', width: 100 %>
+  </td>
+  <td>
+    <%= achievement.badge.title %>
+  </td>
+  <td>
+    <%= achievement.badge.rule %>
+  </td>
+  <td>
+    <%= link_to t('.show_badge'), admin_badge_path(achievement.badge), class: "btn btn-sm btn-outline-success" %>
+    <%= link_to t('.delete_achievement'), admin_achievement_path(achievement), method: :delete, data: { confirm: t('.confirmation') }, class: "btn btn-sm btn-outline-danger" %>
+  </td>
+</tr>
