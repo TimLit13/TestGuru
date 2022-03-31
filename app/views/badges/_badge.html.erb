@@ -1,0 +1,14 @@
+<tr>    
+  <td>
+    <%= octicon badge.image_url, class: 'text-danger', width: 100 %>
+  </td>
+  <td>
+    <%= badge.title %>
+  </td>
+  <td>
+    <%= badge.rule %>
+  </td>
+  <td>
+    <%= link_to t('.show'), badge_path(badge), class: "btn btn-sm btn-outline-success" %>
+  </td>
+</tr>
