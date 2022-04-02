@@ -201,13 +201,12 @@ ru:
 
   achievements:
     achivement:
-      show_badge: "Показать награду"
+      show: "Показать награду"
     index:
       header: "Мои достижения"
       achievement: "Достижение"
       achievement_title: "Наименование"
       actions: "Действия"
-      show: "Показать награду"
 
   badges:
     badge:

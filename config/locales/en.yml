@@ -201,13 +201,12 @@ en:
 
   achievements:
     achivement:
-      show_badge: "Show badge"
+      show: "Show badge"
     index:
       header: "My achievements"
       achievement: "Achivement"
       achievement_title: "Title"
       actions: "Actions"
-      show: "Show badge"
 
   badges:
     badge:
