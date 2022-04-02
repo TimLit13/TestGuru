@@ -33,6 +33,8 @@ ru:
       log_in: "Войти"
       admin_panel: "Admin панель"
       contact_us: "Связаться с нами"
+      my_achievements: "Мои достижения"
+      badges: "Награды"
 
   tests:
     index:
@@ -144,6 +146,21 @@ ru:
       sign_up: "Зарегистрироваться"
       log_in: "Войти"
       gists: "Все Gists"
+      users_achievements: "Достижения пользователей"
+      badges: "Награды"
+    
+    achievements:
+      achievement: 
+        show_badge: "Показать награду"
+        delete_achievement: "Удалить достижение"
+        confirmation: "Подтвердите удаление"
+      index:
+        header: "Достижения"
+        user: "Пользователь"
+        achievement: "Достижение"
+        achievement_title: "Наименование"
+        achievement_rule: "Правило присвоения"
+        actions: "Действия"
 
   tests_mailer:
     completed_test:
@@ -151,7 +168,17 @@ ru:
 
   services:
     gist_question_service:
-      question_from: "Question from %{test}"
+      question_from: "Вопрос из теста %{test}"
       file_name: "question_from_test.txt"
-      question: "Question:"
-      answers: "Answers:"
+      question: "Вопрос:"
+      answers: "Ответы:"
+
+  achivements:
+    achivement:
+      show_badge: "Показать награду"
+    index:
+      header: "Мои достижения"
+      achievement: "Достижение"
+      achievement_title: "Название"
+      actions: "Действия"
+

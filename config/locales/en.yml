@@ -33,6 +33,8 @@ en:
       log_in: "Log in"
       admin_panel: "Admin panel"
       contact_us: "Contact us"
+      my_achievements: "My achievements"
+      badges: "Badges"
 
   tests:
     index:
@@ -144,6 +146,21 @@ en:
       sign_up: "Sign up"
       log_in: "Log in"
       gists: "All Gists"
+      users_achievements: "Users achievements"
+      badges: "Badges"
+
+    achievements:
+      achievement: 
+        show_badge: "Show badge"
+        delete_achievement: "Delete achievement"
+        confirmation: "Confirm"
+      index:
+        header: "Achievements"
+        user: "User"
+        achievement: "Achievement"
+        achievement_title: "Title"
+        achievement_rule: "Rule"
+        actions: "Actions"
 
   tests_mailer:
     completed_test:
@@ -155,4 +172,14 @@ en:
       file_name: "question_from_test.txt"
       question: "Question:"
       answers: "Answers:"
+
+  achivements:
+    achivement:
+      show_badge: "Show badge"
+    index:
+      header: "My achievements"
+      achievement: "Achivement"
+      achievement_title: "Title"
+      actions: "Actions"
+
 
