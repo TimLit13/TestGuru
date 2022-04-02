@@ -162,6 +162,32 @@ ru:
         achievement_rule: "Правило присвоения"
         actions: "Действия"
 
+    badges:
+      badge:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirmation: "Подтвердите"
+      form:
+        submit: "ОК"
+      edit:
+        badge_header: "Редактировать награду"
+        back: "Назад"
+      index:
+        new_badge: "Создать новую награду"
+        header: "Все награды"
+        badge: "Награда"
+        badge_title: "Наименование"
+        badge_rule: "Правило достижения"
+        actions: "Действия"
+      new: 
+        badge_header: "Новая награда"
+        back: "Назад"
+      show:
+        badge_header: "Награда"
+        edit: "Редактировать"
+        back: "Назад"
+
   tests_mailer:
     completed_test:
       subject: "Вы только что прошли тест"

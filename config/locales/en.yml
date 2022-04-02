@@ -162,6 +162,32 @@ en:
         achievement_rule: "Rule"
         actions: "Actions"
 
+    badges:
+      badge:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirmation: "Confirm"
+      form:
+        submit: "Submit"
+      edit:
+        badge_header: "Edit badge"
+        back: "Back"
+      index:
+        new_badge: "Create new badge"
+        header: "Badges"
+        badge: "Badge"
+        badge_title: "Title"
+        badge_rule: "Achievement rule"
+        actions: "Actions"
+      new: 
+        badge_header: "New badge"
+        back: "Back"
+      show:
+        badge_header: "Badge"
+        edit: "Edit"
+        back: "Back"
+
   tests_mailer:
     completed_test:
       subject: "You passed the test"
@@ -181,5 +207,18 @@ en:
       achievement: "Achivement"
       achievement_title: "Title"
       actions: "Actions"
+
+  badges:
+    badge:
+      show: "Show"
+    index:
+      header: "Badges"
+      badge: "Badge"
+      badge_title: "Title"
+      badge_rule: "Achievement rule"
+      actions: "Actions"
+    show:
+      badge_header: "Badge"
+      back: "Back"
 
 
