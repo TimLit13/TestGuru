@@ -13,7 +13,14 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      TestsMailer.completed_test(@test_passage).deliver_now
+      # TestsMailer.completed_test(@test_passage).deliver_now
+
+      achievement_service = AchievementService.new(@test_passage)
+
+      if achievement_service.reward_achievement
+        flash[:notice] = "Вам дали новую ачивку. смотрите список всех " + "#{ view_context.link_to('наград', achievements_path, target: :_blank) }"
+      end
+
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
