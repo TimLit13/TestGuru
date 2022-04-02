@@ -201,7 +201,7 @@ ru:
 
   achievements:
     achievement:
-      show: "Показать награду"
+      show_badge: "Показать награду"
     index:
       header: "Мои достижения"
       achievement: "Достижение"

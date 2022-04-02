@@ -201,7 +201,7 @@ en:
 
   achievements:
     achievement:
-      show: "Show badge"
+      show_badge: "Show badge"
     index:
       header: "My achievements"
       achievement: "Achivement"
