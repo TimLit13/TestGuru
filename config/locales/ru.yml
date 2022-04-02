@@ -199,12 +199,24 @@ ru:
       question: "Вопрос:"
       answers: "Ответы:"
 
-  achivements:
+  achievements:
     achivement:
       show_badge: "Показать награду"
     index:
       header: "Мои достижения"
       achievement: "Достижение"
-      achievement_title: "Название"
+      achievement_title: "Наименование"
       actions: "Действия"
 
+  badges:
+    badge:
+      show: "Показать"
+    index:
+      header: "Награды"
+      badge: "Награда"
+      badge_title: "Наименование"
+      badge_rule: "Правило присвоения"
+      actions: "Действия"
+    show:
+      badge_header: "Награда"
+      back: "Назад"
