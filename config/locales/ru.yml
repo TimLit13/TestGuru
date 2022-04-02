@@ -200,7 +200,7 @@ ru:
       answers: "Ответы:"
 
   achievements:
-    achivement:
+    achievement:
       show: "Показать награду"
     index:
       header: "Мои достижения"

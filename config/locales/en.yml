@@ -200,7 +200,7 @@ en:
       answers: "Answers:"
 
   achievements:
-    achivement:
+    achievement:
       show: "Show badge"
     index:
       header: "My achievements"
