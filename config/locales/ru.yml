@@ -217,6 +217,7 @@ ru:
       badge_title: "Наименование"
       badge_rule: "Правило присвоения"
       actions: "Действия"
+      show: "Показать награду"
     show:
       badge_header: "Награда"
       back: "Назад"

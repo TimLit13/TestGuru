@@ -217,6 +217,7 @@ en:
       badge_title: "Title"
       badge_rule: "Achievement rule"
       actions: "Actions"
+      show: "Show badge"
     show:
       badge_header: "Badge"
       back: "Back"
