@@ -1,12 +1,12 @@
-class Admin::AchievementsController < Admin::BaseController
+class Admin::UserBadgesController < Admin::BaseController
   def index
-    @achievements = Achievement.order(user_id: :asc, created_at: :desc)
+    @user_badges = UserBadge.order(user_id: :asc, created_at: :desc)
   end
 
   def destroy
-    @achievement = Achievement.find(params[:id])
+    @user_badge = UserBadge.find(params[:id])
 
-    if @achievement.destroy
+    if @user_badge.destroy
       redirect_to admin_achievements_path, notice: 'Achievement was successfully deleted.'
     else
       flash.now[:error] = "Could not delete Achievement"

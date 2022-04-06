@@ -1,0 +1,18 @@
+<tr>    
+  <td>
+    <%= user_badge.user.email + ', ' + user_badge.user.first_name + ' ' + user_badge.user.last_name %>
+  </td>
+  <td>
+    <%= octicon user_badge.badge.image_url, class: 'text-danger', width: 100 %>
+  </td>
+  <td>
+    <%= user_badge.badge.title %>
+  </td>
+  <td>
+    <%= user_badge.badge.rule %>
+  </td>
+  <td>
+    <%= link_to t('.show_badge'), admin_badge_path(user_badge.badge), class: "btn btn-sm btn-outline-success" %>
+    <%= link_to t('.delete_achievement'), admin_achievement_path(user_badge), method: :delete, data: { confirm: t('.confirmation') }, class: "btn btn-sm btn-outline-danger" %>
+  </td>
+</tr>

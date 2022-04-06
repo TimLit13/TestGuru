@@ -40,6 +40,6 @@ Rails.application.routes.draw do
     end
 
     resources :badges
-    resources :achievements, only: %i[index destroy]
+    resources :achievements, controller: 'user_badges', only: %i[index destroy]
   end
 end

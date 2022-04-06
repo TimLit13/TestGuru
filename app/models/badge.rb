@@ -1,7 +1,7 @@
 class Badge < ApplicationRecord
 
-  RULES = ["First try success", "Successfully passed all tests in category", "Successfully passed all tests in level"]
+  RULES = %w[completed_first_try completed_category completed_level]
 
-  has_many :achievements, dependent: :destroy
-  has_many :users, through: :achievements
+  has_many :user_badges, dependent: :destroy
+  has_many :users, through: :user_badges
 end

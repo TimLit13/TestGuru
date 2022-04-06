@@ -66,7 +66,10 @@ en:
       success: " successfully created"
       unsuccess: "Gist wasn't created"
     update:
-      test_not_found: "Test not found"      
+      test_not_found: "Test not found"
+      get_achievement: "You get new achievement. See all: "
+      reward: "rewards"
+      test_not_completed: "Test wasn't completed"      
 
   contacts:
     send_question:

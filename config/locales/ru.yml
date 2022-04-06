@@ -66,7 +66,10 @@ ru:
       success: " успешно создан"
       unsuccess: "Gist не был создан"
     update:
-      test_not_found: "Тест не найден"  
+      test_not_found: "Тест не найден"
+      get_achievement: "Вам дали новую ачивку. смотрите список всех "
+      reward: "наград"
+      test_not_completed: "Тест не пройден.."      
 
   contacts:
     send_question:
