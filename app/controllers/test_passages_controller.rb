@@ -2,6 +2,8 @@ class TestPassagesController < ApplicationController
 
   before_action :set_test_passage, only: %i[show result update gist]
 
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_record_not_found
+
   # показывает форму
   def show
   end
@@ -13,7 +15,17 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      TestsMailer.completed_test(@test_passage).deliver_now
+      @test_passage.update(completed: true) if @test_passage.test_passage_success?
+      # TestsMailer.completed_test(@test_passage).deliver_now
+
+      achievement_service = AchievementService.new(@test_passage)
+
+      if achievement_service.call
+        flash[:notice] = t('.get_achievement') + "#{ view_context.link_to(t('.reward'), achievements_path, target: :_blank) }"
+      else
+        flash[:alert] = t('.test_not_completed')
+      end
+
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
@@ -49,4 +61,7 @@ class TestPassagesController < ApplicationController
     )
   end
 
+  def rescue_with_record_not_found
+    render inline: "Can't find test passage with id: #{params[:id]} [status: 404]"
+  end
 end

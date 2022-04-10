@@ -33,6 +33,8 @@ ru:
       log_in: "Войти"
       admin_panel: "Admin панель"
       contact_us: "Связаться с нами"
+      my_achievements: "Мои достижения"
+      badges: "Награды"
 
   tests:
     index:
@@ -63,6 +65,11 @@ ru:
     gist:
       success: " успешно создан"
       unsuccess: "Gist не был создан"
+    update:
+      test_not_found: "Тест не найден"
+      get_achievement: "Вам дали новую ачивку. смотрите список всех "
+      reward: "наград"
+      test_not_completed: "Тест не пройден.."      
 
   contacts:
     send_question:
@@ -142,6 +149,47 @@ ru:
       sign_up: "Зарегистрироваться"
       log_in: "Войти"
       gists: "Все Gists"
+      users_achievements: "Достижения пользователей"
+      badges: "Награды"
+    
+    achievements:
+      achievement: 
+        show_badge: "Показать награду"
+        delete_achievement: "Удалить достижение"
+        confirmation: "Подтвердите удаление"
+      index:
+        header: "Достижения"
+        user: "Пользователь"
+        achievement: "Достижение"
+        achievement_title: "Наименование"
+        achievement_rule: "Правило присвоения"
+        actions: "Действия"
+
+    badges:
+      badge:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirmation: "Подтвердите"
+      form:
+        submit: "ОК"
+      edit:
+        badge_header: "Редактировать награду"
+        back: "Назад"
+      index:
+        new_badge: "Создать новую награду"
+        header: "Все награды"
+        badge: "Награда"
+        badge_title: "Наименование"
+        badge_rule: "Правило достижения"
+        actions: "Действия"
+      new: 
+        badge_header: "Новая награда"
+        back: "Назад"
+      show:
+        badge_header: "Награда"
+        edit: "Редактировать"
+        back: "Назад"
 
   tests_mailer:
     completed_test:
@@ -149,7 +197,29 @@ ru:
 
   services:
     gist_question_service:
-      question_from: "Question from %{test}"
+      question_from: "Вопрос из теста %{test}"
       file_name: "question_from_test.txt"
-      question: "Question:"
-      answers: "Answers:"
+      question: "Вопрос:"
+      answers: "Ответы:"
+
+  achievements:
+    achievement:
+      show_badge: "Показать награду"
+    index:
+      header: "Мои достижения"
+      achievement: "Достижение"
+      achievement_title: "Наименование"
+      actions: "Действия"
+
+  badges:
+    badge:
+      show: "Показать"
+    index:
+      header: "Награды"
+      badge: "Награда"
+      badge_title: "Наименование"
+      badge_rule: "Правило присвоения"
+      actions: "Действия"
+    show:
+      badge_header: "Награда"
+      back: "Назад"

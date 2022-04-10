@@ -5,7 +5,14 @@ USERS_SEED = 3
 ADMINS_SEED = 1
 QUESTIONS_SEED = 4
 
+BADGE_RULES = %w[completed_first_try completed_category completed_level]
+BADGE_COUNT = BADGE_RULES.count
+BADGE_NAMES = %w[ruby trophy mortar-board]
+BADGE_TITLES = ["First try success", "Successfully passed all tests in category", "Successfully passed all tests in level"]
+BADGE_OPTIONS = [1,2,3]
+
 # clear db before seed
+Badge.delete_all if Badge.any?
 TestPassage.delete_all if TestPassage.any?
 Answer.delete_all if Answer.any?
 Question.delete_all if Question.any?
@@ -89,4 +96,12 @@ end
 
 puts '*' * 80
 puts "Answers successfully created"
+puts '*' * 80
+
+BADGE_COUNT.times do |i|
+  Badge.create(title: BADGE_TITLES[i], image_url: BADGE_NAMES[i], rule: BADGE_RULES[i], option: BADGE_OPTIONS[i])
+end
+
+puts '*' * 80
+puts "Badges successfully created"
 puts '*' * 80

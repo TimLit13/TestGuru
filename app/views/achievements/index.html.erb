@@ -1,0 +1,21 @@
+<h3 class="text-center mt-5"><%= t('.header') %></h3>
+
+  <%= render 'shared/errors', resource: @achievement %>
+
+<div class="container">
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th scope="col" class="col-md-4 pointer">
+          <%= t('.achievement') %>
+          </th>
+        <th scope="col" class="col-md-4"><%= t('.achievement_title') %></th>
+        <th scope="col" class="col-md-4 text-center"><%= t('.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <%= render @achievements %>
+    </tbody>
+  </table>
+</div>

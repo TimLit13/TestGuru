@@ -1,0 +1,13 @@
+<div class="card mt-5">
+  <h3 class="card-header">
+    <%= t('.badge_header')%>
+  </h3>
+  <div class="card-body">
+    <div>
+      <%= render 'form', badge: @badge %>
+    </div>
+    <div>
+      <%= link_to t('.back'), admin_badge_path(@badge), class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+</div>

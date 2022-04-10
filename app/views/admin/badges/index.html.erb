@@ -1,0 +1,26 @@
+<h3 class="text-center mt-5"><%= t('.header') %></h3>
+
+<div>
+  <%= link_to t('.new_badge'), new_admin_badge_path, class: "btn btn-outline-success" %>
+</div>
+
+  <%= render 'shared/errors', resource: @badge %>
+
+<div class="container">
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th scope="col" class="col-md-2 pointer">
+          <%= t('.badge') %>
+          </th>
+        <th scope="col" class="col-md-3"><%= t('.badge_title') %></th>
+        <th scope="col" class="col-md-4"><%= t('.badge_rule') %></th>
+        <th scope="col" class="col-md-3 text-center"><%= t('.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <%= render @badges %>
+    </tbody>
+  </table>
+</div>

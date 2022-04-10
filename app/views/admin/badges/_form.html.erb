@@ -1,0 +1,18 @@
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+  <div class="mt-2">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :badge_title %>
+  </div>
+  <div class="mt-2">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, id: :badge_image_url%>
+  </div>
+  <div class="mt-2">
+    <%= form.label :rule %>
+    <%= form.select :rule, Badge::RULES %>
+  </div>
+  <div class="actions mt-2">
+    <%= form.submit t('.submit'), class: "btn btn-outline-success" %>
+  </div>
+<% end %>
