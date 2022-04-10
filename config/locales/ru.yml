@@ -106,7 +106,9 @@ ru:
         questions_number: "Количество вопросов"
         actions: "Действия"
         test_ready: "Готовность"
+        time_for_test: "Время"
       show:
+        time_for_test: "Время на прохождение теста: %{timer} мин"
         test_name: "Тест:"
         add_new_question: "Добавить новый вопрос"
         title: "Название"

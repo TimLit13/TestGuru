@@ -8,6 +8,8 @@
   <%= form.text_field :title, class: "form-control mr-2" %>
   <%= form.check_box :ready %>
   <%= form.label :ready, t('.test_ready') %>
+  <%= form.label :timer %>:
+  <%= form.number_field :timer, in: 1.0..30.0%>
   <%= content_tag :br %>
   <%= form.submit t('.submit'), class: 'btn btn-outline-success' %>
 <% end %>

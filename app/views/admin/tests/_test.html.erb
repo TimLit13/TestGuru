@@ -8,6 +8,7 @@
   </td>
   
   <td><%= questions_count(test) %></td>
+  <td><%= test.timer %></td>
   <td class="text-center">
     <% if test.ready %>
       <button type="button" class="btn btn-sm btn-success" disabled><%= t('.badge_test_ready') %></button>

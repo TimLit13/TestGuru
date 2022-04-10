@@ -15,5 +15,10 @@
     <%= form.collection_select :category_id, Category.all.order(id: :asc), :id, :title %>
   </p>
 
+  <p>
+    <%= form.label :timer %>:
+    <%= form.number_field :timer, in: 1.0..30.0%>
+  </p>
+    
   <%= form.submit %>
 <% end %>
