@@ -22,7 +22,7 @@ class AchievementService
   end
 
   def completed_category(category_level)
-    test_ids = Category.find(category_level).tests.pluck(:id)
+    test_ids = Test.tests_by_category(category_level).pluck(:id)
 
     test_ids.count == user_successfylly_completed_test_passages(test_ids)
   end
