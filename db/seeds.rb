@@ -62,7 +62,8 @@ TESTS_SEED.times do
   test_category_id = categories.map(&:id).sample
   test_author = Admin.first
   test_ready = true
-  tests.push(Test.create!(title: test_title, level: test_level, category_id: test_category_id, author: test_author, ready: test_ready))
+  test_timer = rand(1..15)
+  tests.push(Test.create!(title: test_title, level: test_level, category_id: test_category_id, author: test_author, ready: test_ready, timer: test_timer))
 end
 
 puts '*' * 80
