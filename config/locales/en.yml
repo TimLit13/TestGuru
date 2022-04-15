@@ -62,6 +62,7 @@ en:
       question_number: "Question %{number} from %{count}"
       next: "Next"
       save_gist: "Save this question in GitHub gist"
+      timer: "Remaining time: "
     gist:
       success: " successfully created"
       unsuccess: "Gist wasn't created"

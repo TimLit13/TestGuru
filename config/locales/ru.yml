@@ -62,6 +62,7 @@ ru:
       question_number: "Вопрос %{number} из %{count}"
       next: "Дальше"
       save_gist: "Сохранить этот вопрос в GitHub gist"
+      timer: "Оставшееся время: "
     gist:
       success: " успешно создан"
       unsuccess: "Gist не был создан"
