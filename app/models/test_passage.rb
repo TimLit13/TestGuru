@@ -12,6 +12,7 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     self.correct_question += 1 if (answer_ids && correct_answer?(answer_ids))
     save!
+    finish_passage! if remaining_time_ends?
   end
 
   def completed?
@@ -28,6 +29,18 @@ class TestPassage < ApplicationRecord
 
   def question_number
     self.test.questions.order(:id).where('id <= ?', self.current_question.id).length
+  end
+
+  def remaining_time_ends?
+    Time.current >= self.created_at + self.test.timer.minutes
+  end
+
+  def any_remaining_time?
+    !remaining_time_ends?
+  end
+
+  def finish_passage!
+    self.current_question = nil
   end
 
   private
