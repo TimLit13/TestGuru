@@ -12,7 +12,6 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     self.correct_question += 1 if (answer_ids && correct_answer?(answer_ids))
     save!
-    finish_passage! if remaining_time_ends?
   end
 
   def completed?

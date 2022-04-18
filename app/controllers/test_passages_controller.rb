@@ -6,13 +6,14 @@ class TestPassagesController < ApplicationController
 
   # показывает форму
   def show
-    redirect_to result_test_passage_path(@test_passage) if @test_passage.remaining_time_ends?
   end
 
   def result
   end
 
   def update
+    @test_passage.finish_passage! if @test_passage.remaining_time_ends?
+
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
