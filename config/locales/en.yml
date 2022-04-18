@@ -62,6 +62,7 @@ en:
       question_number: "Question %{number} from %{count}"
       next: "Next"
       save_gist: "Save this question in GitHub gist"
+      timer: "Remaining time: "
     gist:
       success: " successfully created"
       unsuccess: "Gist wasn't created"
@@ -106,7 +107,9 @@ en:
         questions_number: "Number of questions"
         actions: "Actions"
         test_ready: "Ready"
+        time_for_test: "Time"
       show:
+        time_for_test: "Time for passing test: %{timer} min"
         test_name: "Test:"
         add_new_question: "Add new question"
         title: "Title"

@@ -12,15 +12,17 @@ class TestPassagesController < ApplicationController
   end
 
   def update
+    @test_passage.finish_passage! if @test_passage.remaining_time_ends?
+
     @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed?
-      @test_passage.update(completed: true) if @test_passage.test_passage_success?
+    if @test_passage.completed? || @test_passage.remaining_time_ends?
+      @test_passage.update(completed: true) if @test_passage.test_passage_success? && @test_passage.any_remaining_time?
       # TestsMailer.completed_test(@test_passage).deliver_now
 
       achievement_service = AchievementService.new(@test_passage)
 
-      if achievement_service.call
+      if achievement_service.call && @test_passage.test_passage_success? 
         flash[:notice] = t('.get_achievement') + "#{ view_context.link_to(t('.reward'), achievements_path, target: :_blank) }"
       else
         flash[:alert] = t('.test_not_completed')

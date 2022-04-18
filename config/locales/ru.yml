@@ -62,6 +62,7 @@ ru:
       question_number: "Вопрос %{number} из %{count}"
       next: "Дальше"
       save_gist: "Сохранить этот вопрос в GitHub gist"
+      timer: "Оставшееся время: "
     gist:
       success: " успешно создан"
       unsuccess: "Gist не был создан"
@@ -106,7 +107,9 @@ ru:
         questions_number: "Количество вопросов"
         actions: "Действия"
         test_ready: "Готовность"
+        time_for_test: "Время"
       show:
+        time_for_test: "Время на прохождение теста: %{timer} мин"
         test_name: "Тест:"
         add_new_question: "Добавить новый вопрос"
         title: "Название"

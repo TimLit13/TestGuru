@@ -1,4 +1,7 @@
 <h3><%= t('.test_name') %> <%= @test.title %></h3>
+<div>
+  <p><%= t('.time_for_test', timer: @test.timer)%></p>
+</div>
 
 <%= link_to t('.add_new_question'), new_admin_test_question_path(@test) %> 
 
