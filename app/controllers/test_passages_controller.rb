@@ -16,7 +16,7 @@ class TestPassagesController < ApplicationController
 
     @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed?
+    if @test_passage.completed? || @test_passage.remaining_time_ends?
       @test_passage.update(completed: true) if @test_passage.test_passage_success? && @test_passage.any_remaining_time?
       # TestsMailer.completed_test(@test_passage).deliver_now
 
